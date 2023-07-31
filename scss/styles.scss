@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #012e3b;
+  color: floralwhite;
+}
+
+.body-guias {
+  display: grid;
+  grid-template-areas: "header" 
+                       "main" 
+                       "footer";
+}
+
+.videos-guides {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.body-lecturas {
+  display: grid;
+  grid-template-areas: "header"
+                       "main"
+                       "footer";
+}
+
+.body-musica {
+  display: grid;
+  grid-template-areas: "header header"
+                       "main main"
+                       "footer footer";
+}
+
+.body-peliculas {
+  display: grid;
+  grid-template-areas: "header"
+                       "main"
+                       "footer";
+}
+
+.header {
+  grid-area: header;
+  top: 0;
+  left: 0;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  height: fit-content;
+
+  .logo {
+    font-size: 35px;
+    color: floralwhite;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  .menu {
+    display: flex;
+    width: 100%;
+    margin: 10px;
+
+    .containerMenu {
+      display: flex;
+      width: 100%;
+
+      div {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+
+    ul li {
+      list-style-type: none;
+      font-size: 28px;
+      margin: 5px;
+      display: inline-block;
+
+      a {
+        text-decoration: none;
+        color: floralwhite;
+
+        &:hover {
+          color: #00abf0;
+        }
+      }
+    }
+  }
+}
+
+.home {
+  grid-area: main;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  height: 90vh;
+
+  .home-content {
+    margin-top: 25px;
+
+    h1 {
+      font-size: 70px;
+      font-weight: 700;
+    }
+
+    .guide-text {
+      max-width: 850px;
+      font-size: 20px;
+    }
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h3 {
+    text-decoration: underline;
+  }
+
+  .text {
+    text-align: center;
+    max-width: 300px;
+    font-size: 17px;
+  }
+
+  .text-read {
+    text-align: center;
+    max-width: 600px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+    padding: 0 10%;
+  }
+}
+
+footer {
+  grid-area: footer;
+  margin-top: 4rem;
+}
+
+@media only screen and (max-width: 450px) {
+  .home {
+    flex-direction: column; 
+    text-align: center; 
+
+    .home-content {
+      margin-top: 5rem;
+    }
+
+    .flex-container {
+      margin-top: 2rem; 
+    }
+
+    .grid-container {
+      grid-template-columns: 1fr; 
+    }
+
+    .grid-container > div {
+      margin-top: 1rem;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
