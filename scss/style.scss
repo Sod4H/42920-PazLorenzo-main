@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import 'variables';
+@import 'partials';
+@import 'mixins';
+@import 'extends';
 
 * {
   margin: 0;
@@ -64,6 +68,7 @@ body {
   }
 
   .menu {
+    @extend %underline-link;
     display: flex;
     width: 100%;
     margin: 10px;
